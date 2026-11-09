@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600&display=swap');
+
+:root{color-scheme:light;--paper:#ffffff;--ink:#000000;--gold:#d4af00;--line:#d9ca88}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,Arial,sans-serif}
+
+.page{max-width:1800px;margin:auto;padding:0 4.6vw}
+.header{height:122px;display:flex;align-items:center;justify-content:space-between;gap:32px;border-bottom:1px solid var(--line)}
+.brand{width:103px;height:83px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.brand img{width:120px;height:80px;object-fit:contain;mix-blend-mode:multiply}
+nav{display:flex;gap:clamp(22px,3.4vw,64px);align-items:center}
+nav button{font:500 12px Manrope,Arial,sans-serif;letter-spacing:.025em;position:relative;display:flex;align-items:center;gap:10px;min-height:48px;padding:8px 0;border:0;background:none;color:var(--ink);cursor:pointer;white-space:nowrap}
+nav button span{font-family:Georgia,serif;font-size:14px;color:var(--gold)}
+nav button::after{content:"";height:1px;background:var(--gold);position:absolute;left:0;right:0;bottom:4px;transform:scaleX(0);transform-origin:left;transition:transform .2s}
+nav button:hover::after,nav button:focus-visible::after{transform:scaleX(1)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:6px}
+.hero{padding:32px 0 28px}
+.ornament{display:flex;gap:15px;align-items:center;justify-content:center;color:var(--gold);font-size:18px;height:20px;margin-bottom:15px}
+.ornament i{display:block;width:52px;height:1px;background:var(--line)}
+h1{font:500 clamp(48px,6.5vw,112px)/.94 'Cormorant Garamond',Georgia,serif;letter-spacing:-.035em;text-align:center;text-transform:uppercase;margin:0 auto 42px;max-width:1320px}
+h1 em{font-weight:500;color:var(--gold);letter-spacing:-.035em}
+.gallery{display:grid;grid-template-columns:1fr 52px 1fr;align-items:center;max-width:1330px;margin:0 auto}
+figure{margin:0;position:relative;padding:8px;border:1px solid var(--line);background:var(--paper);box-shadow:0 8px 20px #4c42280b}
+figure::before,figure::after{content:"";position:absolute;width:13px;height:13px;border-color:var(--gold);pointer-events:none}
+figure::before{top:-3px;left:-3px;border-left:3px solid;border-top:3px solid;color:var(--gold)}
+figure::after{bottom:-3px;right:-3px;border-right:3px solid;border-bottom:3px solid;color:var(--gold)}
+figure img{display:block;width:100%;height:auto}
+.gallery-divider{height:100%;display:flex;align-items:center;justify-content:center;position:relative;color:var(--gold);font-size:16px}
+.gallery-divider::before{content:"";position:absolute;top:10%;bottom:10%;width:1px;background:var(--line)}
+.gallery-divider span{z-index:1;padding:15px 0;background:var(--paper)}
+.end-rule{height:35px;display:flex;align-items:flex-end;gap:18px;justify-content:center;color:var(--gold);font-size:8px}
+.end-rule::before,.end-rule::after{content:"";height:1px;width:90px;background:var(--line);margin-bottom:4px}
+@media(min-width:1600px){.hero{padding-top:40px}h1{margin-bottom:50px}}
+@media(max-width:900px){.page{padding:0 5vw}.header{height:106px;gap:15px}.brand{width:70px}.brand img{width:90px}nav{gap:22px}nav button{font-size:10px;gap:6px}h1{font-size:7.1vw}.gallery{grid-template-columns:1fr 30px 1fr}.hero{padding-top:28px}}
+@media(max-width:620px){.header{height:auto;min-height:128px;flex-direction:column;gap:0;padding:8px 0 12px}.brand{height:64px}.brand img{height:62px;width:94px}nav{width:100%;justify-content:space-between;gap:10px}nav button{font-size:9px;gap:4px;min-height:38px;letter-spacing:0}nav button span{font-size:11px}.hero{padding-top:26px}.ornament{margin-bottom:20px}h1{font-size:8.3vw;line-height:1.02;margin-bottom:30px;letter-spacing:-.045em}.gallery{grid-template-columns:1fr;gap:22px;max-width:460px}.gallery-divider{display:none}figure{padding:6px}.end-rule{margin-top:5px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}nav button::after{transition:none}}
+
+/* Composition matched to the supplied architectural reference. */
+:root{--gold:#dfa900;--line:#dfa900}
+body{background:#fff url('assets/marble-architecture.png') center top / 100% auto no-repeat;min-height:56.28vw}
+.page{max-width:none;padding:0 7.3vw}
+.header{height:6.34vw;min-height:88px}
+.brand{width:5vw;height:5vw}
+.brand img{width:7.6vw;height:5.1vw}
+nav{gap:3vw}
+nav button{font-size:12px;gap:9px;letter-spacing:-.045em}
+.hero{padding:2.2vw 0 2.1vw}
+.ornament{margin-bottom:1.1vw;height:1.2vw;font-size:16px}
+.ornament i{width:49px}
+h1{font-size:6.1vw;line-height:.94;max-width:none;margin-bottom:2.5vw}
+.hero{position:relative;left:-4px}
+.gallery{width:71.4vw;max-width:none;grid-template-columns:1fr 2.5vw 1fr}
+figure{padding:8px;background:transparent;box-shadow:none}
+.mosaic img{aspect-ratio:1.58;object-fit:cover}
+.map img{aspect-ratio:1.47;object-fit:fill}
+.gallery-divider::before{top:9%;bottom:9%}
+.gallery-divider span{background:#fff;padding:15px 0}
+.end-rule{display:none}
+@media(max-width:900px){.page{padding:0 5vw}.header{height:90px;min-height:0}.brand{width:70px;height:70px}.brand img{width:105px;height:70px}nav{gap:20px}nav button{font-size:10px}.hero{padding-top:26px}.ornament{height:20px;margin-bottom:18px}h1{font-size:6.2vw;margin-bottom:35px}.gallery{width:75vw;grid-template-columns:1fr 25px 1fr}figure{padding:6px}}
+@media(max-width:620px){body{background-size:auto 760px;min-height:100vh}.header{height:auto;min-height:128px}.brand{height:64px}.brand img{height:62px;width:94px}nav{gap:10px}nav button{font-size:9px;gap:4px}.hero{padding-top:24px}h1{font-size:8.3vw;line-height:1.02;margin-bottom:30px}.gallery{width:100%;max-width:460px;grid-template-columns:1fr;gap:22px}}
